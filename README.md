@@ -2,6 +2,10 @@
 
 This is a simple hello world web application using Axum.
 
+## Setup
+
+Open the project in VSCode using Dev Containers extension.
+
 ## Running the application
 
 ```sh
