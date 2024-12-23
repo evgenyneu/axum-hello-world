@@ -39,15 +39,22 @@ scp target/aarch64-unknown-linux-gnu/release/axum-hello-world orange:~/axum-hell
 
 ```sh
 sudo apt install wrk
-wrk -t8 -c10 -d5s http://localhost:3000
+wrk -t10 -c1000 -d60s http://192.168.20.24:3000/
 ```
 
+
+Results:
+
 ```
-  8 threads and 10 connections
+> wrk -t10 -c1000 -d60s http://192.168.20.24:3000/
+Running 1m test @ http://192.168.20.24:3000/
+  10 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   126.00us  126.77us  16.37ms   96.09%
-    Req/Sec     8.14k   430.20    19.33k    88.51%
-  1945816 requests in 30.10s, 241.24MB read
-Requests/sec:  64646.26
-Transfer/sec:      8.01MB
+    Latency    71.91ms  133.13ms   1.99s    88.25%
+    Req/Sec     2.51k   815.27     5.30k    64.20%
+  1500233 requests in 1.00m, 186.00MB read
+  Socket errors: connect 0, read 0, write 0, timeout 2
+Requests/sec:  24983.98
+Transfer/sec:      3.10MB
+
 ```
