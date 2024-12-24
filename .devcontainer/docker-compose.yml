@@ -18,6 +18,12 @@ services:
     # Add user mapping to ensure correct permissions
     user: vscode
 
+    environment:
+      PGHOST: localhost
+      PGUSER: ${POSTGRES_USER:-postgres}
+      PGPASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      PGDATABASE: postgres
+
   db:
     image: postgres:17.2
     restart: unless-stopped
