@@ -6,6 +6,13 @@ This is a simple hello world web application using Axum.
 
 Open the project in VSCode using Dev Containers extension.
 
+## Setup database
+
+```sh
+cargo install sqlx-cli --no-default-features --features postgres
+sqlx database create
+```
+
 ## Running the application
 
 ```sh
