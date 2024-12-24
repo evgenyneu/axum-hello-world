@@ -1,0 +1,10 @@
+# Bind Ctrl-R to use fzf for history search
+# --------------
+
+fzf-history-widget() {
+  BUFFER=$(history -n 1 | tac | fzf --tac +s --preview 'echo {}')
+  CURSOR=$#BUFFER
+}
+
+zle -N fzf-history-widget
+bindkey '^R' fzf-history-widget
