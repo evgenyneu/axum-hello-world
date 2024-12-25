@@ -96,7 +96,7 @@ Transfer/sec:     10.06MB
 
 ## Hardware
 
-The tests were run on Orange Pi 5 Max with 16 GB RAM and 1 TB NVMe SSD running Ubuntu 24.04 LTS. Program was compiled with Rust 1.83.0.
+The web server was run on Orange Pi 5 Max with 16 GB RAM and 1 TB NVMe SSD running Ubuntu 24.04 LTS. The program was compiled with Rust 1.83.0. The `wrk` benchmark command was run on a Desktop PC (12600K, 32 GB RAM), running Ubuntu 24.04 LTS. Both machines were connected to NetComm NF18ACV router via 1 Gbps Ethernet cables.
 
 ## Server response
 
