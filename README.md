@@ -4,14 +4,7 @@ This is a simple Axum (Rust) web app that returns "Hello, World!" response, made
 
 ## Setup
 
-Open the project in VSCode using Dev Containers extension.
-
-## Setup database
-
-```sh
-cargo install sqlx-cli --no-default-features --features postgres
-sqlx database create
-```
+Install Rust.
 
 ## Running the application
 
