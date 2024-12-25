@@ -100,6 +100,8 @@ The tests were run on Orange Pi 5 Max with 16 GB RAM and 1 TB NVMe SSD running U
 
 ## Server response
 
+The `x-filler` header was added to make the HTTP response size equal to that of the Next.js benchmark.
+
 ```sh
 curl -v http://192.168.20.25:3000/
 *   Trying 192.168.20.25:3000...
