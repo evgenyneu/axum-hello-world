@@ -49,7 +49,7 @@ scp target/aarch64-unknown-linux-gnu/release/axum-hello-world orange:~/axum-hell
 RAM usage: 238M
 CPU Load average (over 1 minute): 0.06
 
-### Server running
+### Server running idle
 
 RAM usage: 237M
 CPU Load average (over 1 minute): 0.06
