@@ -80,18 +80,18 @@ wrk -t10 -c1000 -d600s http://192.168.20.25:3000/
 ```
 
 RAM usage: 270 MB
-CPU Load average (over 1 minute): 2.22
+CPU Load average (over 1 minute): 2.23
 
 Results:
 
 ```
   10 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    27.32ms   24.08ms 944.30ms   97.44%
-    Req/Sec     4.10k   131.57    13.72k    85.12%
-  24447420 requests in 10.00m, 5.85GB read
-Requests/sec:  40741.48
-Transfer/sec:      9.99MB
+    Latency    27.81ms   26.06ms 482.62ms   96.82%
+    Req/Sec     4.13k   106.13     5.54k    72.94%
+  24628834 requests in 10.00m, 5.89GB read
+Requests/sec:  41044.39
+Transfer/sec:     10.06MB
 ```
 
 
