@@ -93,3 +93,21 @@ Results:
 Requests/sec:  41392.77
 Transfer/sec:      5.13MB
 ```
+
+
+## Misc
+
+### Calculate the size of the response
+
+```sh
+curl -s -o /dev/null -w "%{size_download}\n%{size_header}\n" http://192.168.20.25:3000/
+```
+
+Axum:
+13
+117
+
+
+Next.js
+13
+244
