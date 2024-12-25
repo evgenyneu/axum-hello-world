@@ -98,10 +98,31 @@ Transfer/sec:     10.06MB
 
 The tests were run on Orange Pi 5 Max with 16 GB RAM and 1 TB NVMe SSD running Ubuntu 24.04 LTS. Program was compiled with Rust 1.83.0.
 
-## Misc
+## Server response
 
-### Calculate the size of the response
+```sh
+curl -v http://192.168.20.25:3000/
+*   Trying 192.168.20.25:3000...
+* Connected to 192.168.20.25 (192.168.20.25) port 3000
+> GET / HTTP/1.1
+> Host: 192.168.20.25:3000
+> User-Agent: curl/8.5.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< content-type: text/plain; charset=utf-8
+< x-filler: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+< content-length: 13
+< date: Wed, 25 Dec 2024 04:18:50 GMT
+<
+* Connection #0 to host 192.168.20.25 left intact
+Hello, World!
+```
+
+Response size:
 
 ```sh
 curl -s -o /dev/null -w "%{size_download}\n%{size_header}\n" http://192.168.20.25:3000/
+13
+244
 ```
