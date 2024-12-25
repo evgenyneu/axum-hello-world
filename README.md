@@ -44,25 +44,6 @@ scp target/aarch64-unknown-linux-gnu/release/axum-hello-world orange:~/axum-hell
 
 ## Benchmarking
 
-```sh
-sudo apt install wrk
-wrk -t10 -c1000 -d180s http://192.168.20.25:3000/
-```
-
-Results:
-
-```
-> wrk -t10 -c1000 -d180s http://192.168.20.25:3000/
-Running 3m test @ http://192.168.20.25:3000/
-  10 threads and 1000 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    26.48ms   22.35ms 268.08ms   97.72%
-    Req/Sec     4.19k   117.07     5.82k    78.12%
-  7512554 requests in 3.00m, 0.91GB read
-Requests/sec:  41728.01
-Transfer/sec:      5.17MB
-```
-
 ### Before (after reboot)
 
 RAM usage: 238M
@@ -79,8 +60,8 @@ CPU Load average (over 1 minute): 0.06
 wrk -t10 -c1000 -d600s http://192.168.20.25:3000/
 ```
 
-RAM usage: 270 MB
-CPU Load average (over 1 minute): 2.23
+* RAM usage: 270 MB
+* CPU Load average (over 1 minute): 2.23
 
 Results:
 
