@@ -1,13 +1,9 @@
 use axum::{http::HeaderValue, response::IntoResponse, routing::get, Router};
 
+static FILLER: HeaderValue = HeaderValue::from_static("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+
 async fn hello_world() -> impl IntoResponse {
-    (
-        [(
-            "x-filler",
-            HeaderValue::from_static("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"),
-        )],
-        "Hello, World!",
-    )
+    ([("x-filler", &FILLER)], "Hello, World!")
 }
 
 #[tokio::main]
