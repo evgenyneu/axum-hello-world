@@ -1,6 +1,6 @@
 # Axum Hello World benchmark
 
-This is a simple Axum (Rust) web app that returns "Hello, World!" response, made for benchmarking performance and resource usage and comparing it with [Next.js (JavaScript)](https://github.com/evgenyneu/nextjs-hello-world) benchmark.
+This is a simple Axum (Rust) web app that returns "Hello, World!" response, made for benchmarking performance and resource usage and comparing it with [Next.js](https://github.com/evgenyneu/nextjs-hello-world) and [Hono](https://github.com/evgenyneu/hono-hello-world) benchmarks.
 
 ## Setup
 
